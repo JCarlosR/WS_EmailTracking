@@ -12,9 +12,9 @@ if (isset($_GET['year']))
 else $year = null;
 
 if ($year)
-    $query = getQueryOpenedAt($year, $month);
+    $query = getQueryClientsBySellerAt($year, $month);
 else
-    $query = getQueryOpened();
+    $query = getQueryClientsBySeller();
 
 $resultSet = sqlsrv_query($cn, $query);
 
